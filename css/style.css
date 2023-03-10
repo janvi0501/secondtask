@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+.students {
+    display: none;
+}
+.table_data{
+    margin-top: 30px;
+}
