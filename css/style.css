@@ -1,9 +1,22 @@
 *{
     box-sizing: border-box;
 }
-.students {
+/* .students {
     display: none;
-}
+} */
 .table_data{
     margin-top: 30px;
+}
+.form_details{
+    box-shadow: 0 4px 8px 0 rgba(35, 35, 35, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.button{
+    margin: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#msg{
+    margin-top: 30px;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
 }

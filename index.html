@@ -9,94 +9,96 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="form-content container">
-        <button class="btn btn-dark" id="student">Students</button>
-        <div class="students" id="students">
-            <form class="bg-light" id="form">
-                <div>
-                    <label for="text">Text:</label>
-                    <input type="text" name="text" class="form-control" id="text"><br>
-                    
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="emailid" class="form-control" id="email"><br>
-                   
-                </div>
-                <div>
-                    <label for="phonenumber">Phone Number:</label>
-                    <input type="phonenumber" class="form-control" id="phonenumber"><br> 
-                    
-                </div>
-                <div>
-                    <label for="date">Birthdate:</label>
-                    <input type="date" name="birthdate" class="form-control" id="date"><br>
-                    
-                </div>
-                <div>
-                    <label for="time">Appointment time:</label>
-                    <input type="time" name="appointmenttime" class="form-control" id="time"><br>
-                   
-                </div>
-                <div>
-                    <label for="fcolor">Favorite color:</label>
-                    <!-- <input list="fcolor" class="form-control" id="fcolor"> -->
-                    <select id="fcolor" class="form-control">
-                        <option>Pink</option>
-                        <option>Red</option>
-                        <option>Blue</option>
-                        <option>Purple</option>
-                    </select><br>
-                    
-                </div>
-                <div>
-                    <label for="radio" class>Payment method:</label><br>
-                    <input type="radio" name="paymentmethod" id="pay_method">Cash<br>
-                    <input type="radio" name="paymentmethod" id="pay_method">Checks<br>
-                    <input type="radio" name="paymentmethod" id="pay_method">Debit card<br>
-                    <input type="radio" name="paymentmethod" id="pay_method">Bank Transfar<br><br> 
-                    
-                <div>
-                    <label for="range">Age:</label>
-                    <input type="range" name="age" id="age"><br><br>
-                     
-                </div>
-                <div>
-                    <label for="options">Checkbox options:</label><br>
-                    <input type="checkbox" name="checkboxoptions" id="check_opt">box_1<br>
-                    <input type="checkbox" name="checkboxoptions" id="check_opt">box_2<br>
-                    <input type="checkbox" name="checkboxoptions" id="check_opt">box_3<br><br>
-                   
-                </div>
-                <div>
-                    <label for="file">Upload photo:</label>
-                    <input type="file" name="uploadphoto" id="up_pic"><br><br>
-                    
-                </div>   
-            </form>
-        <div>
-            <button class="btn btn-danger"  onclick="return submitForm()">Submit</button>
-        </div>
+    <button class="btn btn-dark" id="student">Students</button>
+    <div class="container form_details">
+        <form id="form" class="form_contant bg-light">
+            <div>
+                <label for="text">Name:</label>
+                <input type="text" id="name" class="form-control">
+               
+            </div><br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control">
+                
+            </div><br>
+            <div>
+                <label for="number">Phone number:</label>
+                <input type="number" id="phoneNumber" class="form-control">
+             
+            </div><br>
+            <div>
+                <label for="date">Birthday:</label>
+                <input type="date" id="birthday" class="form-control" required>   
+                  
+            </div><br>
+            <div>
+                <label for="time">Time:</label>
+                <input type="time" id="time" class="form-control" required>
+               
+            </div><br>
+            <div>
+                <label for="color">Favorite color:</label>
+                <select id="color" class="form-control">
+                    <option >Pink</option>
+                    <option >Red</option>
+                    <option >Blue</option>
+                </select>
+                
+            </div><br>
+            <div>
+                <label>Payment method:</label><br> 
+                <input type="radio" id="paymentMethod1" name="paymentmethod" value="op1">Credit cards<br>
+                <input type="radio" id="paymentMethod2" name="paymentmethod" value="op2">Cash On Delivery<br>
+                <input type="radio" id="paymentMethod3" name="paymentmethod" value="op3">Debit cards<br>
+            </div><br>
+            <div>
+                <label for="range">Age:</label>
+                <input type="range" id="age">
+               
+            </div><br>
+            <div>
+                <label for="checkbox">Checkbox option:</label><br>
+                <input type="checkbox" id="checkbox" value="box_1">box_1<br>
+                <input type="checkbox" id="checkbox" value="box_2">box_2<br>
+                <input type="checkbox" id="checkbox" value="box_3">box_3<br>
+              
+            </div><br>
+            <div>
+                <label for="file">Upload photo</label>>
+                <input type="file" id="file">
+                
+            </div><br>   
+        </form>
+    <div class="text-center">
+        <button  class="btn btn-danger button" onclick="submitForm()">Submit</button>
+    </div>
+    </div>
 
-        <div class="table_data container">
-            <table class="table table-bordered">
-                <tr>
-                    <td>Name</td>
-                    <td>Email</td>
-                    <td>Phone Number</td>
-                    <td>Birthday</td>
-                    <td>Appointment time</td>
-                    <td>Favorite color</td>
-                    <td>Payment method</td>
-                    <td>Age</td>
-                    <td>Checkbox option</td>
-                    <td>Upload photo</td>
-                </tr>
-            </table>
-            </div>
-        </div>
-   </div>
+    <div id="msg" class="container"></div><br><br>
+    
+    <div class="container table_data">
+    <table class="table table-bordered" id="data_insert">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Phone Number</td>
+                <td>Birthday</td>
+                <td>Appointment time</td>
+                <td>Favorite color</td>
+                <td>Payment method</td>
+                <td>Age</td>
+                <td>Checkbox option</td>
+                <td>Upload photo</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+    </table>
+    </div>
    <script src="js/index.js"></script>
 </body>
 </html>
